@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/Font-Awesome-3.2.1/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<style>
+body,html{
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+</style>
+
+</head>
+<body>
+<div class="crumbs">
+	<div class="buttoncommon"><a href="manager_add.html">添加管理员</a></div>
+	<div class="buttoncommon"><a href="manager.html">管理员列表</a></div>
+</div>
+<div class="role">
+	<form name="" action="" method="post">
+		<dl class="inputgroup">
+			<dd>
+				<label>帐号</label><input type="text" name="username" value="" /><div class="input-tip"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-ok"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-err"><i class="icon-info-sign"></i>请输入角色名称</div>
+			</dd>
+			<dd>
+				<label>密码</label><input type="password" name="password" value="" /><div class="input-tip"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-ok"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-err"><i class="icon-info-sign"></i>请输入角色名称</div>
+			</dd>
+			<dd>
+				<label>重复密码</label><input type="password" name="password" value="" /><div class="input-tip"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-ok"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-err"><i class="icon-info-sign"></i>请输入角色名称</div>
+			</dd>
+			<dd>
+				<label>状态</label><div class="radio"><input type="radio" name="state" value="1" checked="checked" />启用</div><div class="radio"><input type="radio" name="state" value="0" />禁用</div>
+			</dd>
+			<dd>
+				<label>角色</label>
+				<select name="role">
+					<option value="">请选择角色</option>	
+					<option value="">管理员</option>
+				</select>
+			</dd>
+			<dd>
+				<input type="submit" name="sub" value="提交" /><input type="reset" name="reset" value="重置" />
+			</dd>
+		</dl>	
+	</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/Font-Awesome-3.2.1/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<style>
+body,html{
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+</style>
+
+</head>
+<body>
+<div class="crumbs">
+	<div class="buttoncommon"><a href="#">添加角色</a></div>
+	<div class="buttoncommon"><a href="role.html">角色管理</a></div>
+</div>
+<div class="role">
+	<form name="" action="" method="post">
+		<dl class="inputgroup">
+			<dd>
+				<label>角色名称</label><input type="text" name="rolename" value="" /><div class="input-tip"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-ok"><i class="icon-info-sign"></i>请输入角色名称</div><div class="input-err"><i class="icon-info-sign"></i>请输入角色名称</div>
+			</dd>
+			<dd>
+				<label>描述</label><textarea name="describe" rows="3" cols="27"></textarea>
+			</dd>
+			<dd>
+				<label>状态</label><div class="radio"><input type="radio" name="state" value="1" checked="checked" />启用</div><div class="radio"><input type="radio" name="state" value="0" />禁用</div>
+			</dd>
+			<dd>
+				<input type="submit" name="sub" value="提交" /><input type="reset" name="reset" value="重置" />
+			</dd>
+		</dl>	
+	</form>
+</div>
+
+</body>
+</html>

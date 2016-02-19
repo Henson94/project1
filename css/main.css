@@ -1,0 +1,490 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: Microsoft YaHei,"微软雅黑", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+a{
+	text-decoration: none;
+}
+form {
+	display: inline-block;
+}
+h1{
+	font-size: 20px;
+	font-weight: normal;
+	padding: 15px 0px;
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+.mr15{
+	margin-right: 15px;
+}
+.clear{
+	clear: both;
+}
+
+/*整体布局*/
+*::-webkit-scrollbar{
+	width:8px;
+	height: 8px;
+}
+*::-webkit-scrollbar-button{
+	height:0px;
+	width: 0px;
+}
+*::-webkit-scrollbar-thumb{
+	background-color:rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+*::-webkit-scrollbar-track{
+	background-color:rgba(125,125,125,0.5);
+}
+
+
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+table thead td {
+	font-weight: bolder;
+}
+table caption{
+	padding: 5px 0px;
+	text-align: left;
+}
+.maintable{
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+	position: relative;
+
+}
+.maintable tr td{
+	vertical-align: top;
+}
+.maintable tr:nth-child(1) {
+	/*top*/
+	height: 50px;
+	background: #222;
+	border: 1px solid #101010;
+}
+.maintable tr td:first-child{
+	/*brand*/
+	width: 200px;
+	max-width: 200px;
+	min-width: 200px;
+}
+.maintable tr:nth-child(2) {
+	/*main-body*/
+	height: 100%;
+}
+.maintable tr:nth-child(2) td:first-child{
+	/*left*/
+	width: 200px;
+	min-width: 200px;
+	max-width: 200px;
+}
+.maintable tr:nth-child(2) td:last-child{
+	/*right*/
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	overflow: hidden;
+}
+
+.maintable .left{
+	width: 200px;
+	min-width: 200px;
+	max-width: 200px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: #222;
+}
+.maintable .left::-webkit-scrollbar{
+	width:0px;		/*隐藏竖直滚动条*/
+	height: 0px;	/*隐藏水平滚动条*/
+}
+
+.maintable .main{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	
+}
+.maininner{
+	border-top: 15px solid #fff;
+	border-left: 15px solid #fff;
+	border-right: 15px solid #fff;
+	padding-bottom: 50px;
+	min-width: 900px;
+}
+.maintable .main::-webkit-scrollbar {
+	
+}
+/*整体布局*/
+
+/*头部*/
+.brand a{
+	width: 200px;
+	overflow: hidden;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	font-size: 20px;
+	font-weight:lighter;
+	color: #0099FF;
+	text-indent: 10px;
+}
+.brand a:hover{
+	color: #fff;
+}
+.maintable .user{
+	width: 150px;
+	height: 30px;
+	
+	line-height: 30px;
+	color: #fff;
+	background: #0099FF;
+	border: 1px solid #0099FF;
+}
+/*头部*/
+
+/*垂直下拉菜单*/
+.verticalmenu{
+	width: 100%;
+	
+}
+
+.verticalmenu dl{
+	width: 100%;
+}
+
+.verticalmenu dl dd a{
+	display: block;
+	height: 20px;
+	padding: 10px 0px;
+	padding-left: 15px;
+	color: #aaa;
+	background: #101010;
+	position: relative;
+	
+	border-bottom: 1px solid #101010;
+}
+.verticalmenu > dl > dd > a {
+	background: #222;
+}
+.verticalmenu dl dd.active > a{
+	/*background: #0099FF;
+	color: #fff;
+	*/
+	border-bottom: 1px solid #101010;
+}
+.verticalmenu dl dd.active > a i{
+	/*
+	color: #fff;
+	*/
+	color: #00AA88;
+}
+.verticalmenu dl dd.selected > a {
+	background: #00AA88;
+	color: #fff;
+	
+}
+.verticalmenu dl dd.selected > a i{
+	color: #fff;
+}
+.verticalmenu dl dd.selected > a:after{
+	position: absolute;
+	content: "";
+	width: 0px;
+	height:0px;
+	right: 0px;
+	border-top: 10px solid transparent;
+	border-right: 10px solid #fff;
+	border-bottom: 10px solid transparent;
+}
+.verticalmenu dl dd i{
+	color: #aaa;
+	margin:0px 5px;
+}
+.verticalmenu dl dd a:hover{
+	/*left: 1px;
+	top: 1px;
+	background: #0099FF;
+	color: #fff;*/
+	text-shadow: 3px 3px 3px #000000;
+	color: #fff;
+	
+}
+.verticalmenu dl dd a:hover i{
+	/*background: #0099FF;
+	*/
+	color: #fff;
+}
+.verticalmenu dl dd dl{
+	height: 0px;
+	overflow: hidden;
+	
+	transition: height 0.3s;
+	-webkit-transition: height 0.3s;
+	-ms-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+}
+/*垂直下拉菜单*/
+
+.crumbs{
+	padding: 10px;
+	background: #E2E9EA;
+	margin-bottom: 10px;
+	
+}
+.crumbs a{
+	color: #0099FF;
+}
+.crumbs a:hover{
+	color: #00AA88;
+}
+.row{
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+.col50 {
+	width: 50%;
+	float: left;
+	height: 100%;
+	padding-bottom: 15px;
+}
+.tableblock{
+	background: #FFFFFF;
+	
+}
+.tableblock table{
+	table-layout: fixed;
+	border: 1px solid #eaeaea;
+}
+.tableblock table caption{
+	background: #E2E9EA;
+	text-indent: 10px;
+	font-weight: bolder;
+
+}
+.tableblock table tr td{
+	padding: 5px 0px;
+	text-indent: 10px;
+}
+.tableblock table tr td:first-child{
+	width: 30%;
+
+}
+dl.inputgroup{
+	
+}
+dl.inputgroup dd{
+	padding: 10px;
+	border-bottom: 1px solid #eaeaea;
+}
+dl.inputgroup dd label{
+	display: inline-block;
+	width: 90px;
+}
+dl.inputgroup dd  .input-tip{
+	padding-left: 20px;
+	color: #0099FF;
+	display: inline-block;
+}
+dl.inputgroup dd  .input-tip i{
+	color: #0099FF;
+}
+dl.inputgroup dd  .input-ok{
+	padding-left: 20px;
+	color: #00AA88;
+	display: inline-block;
+}
+dl.inputgroup dd  .input-ok i{
+	color: #00AA88;
+}
+dl.inputgroup dd  .input-err{
+	padding-left: 20px;
+	color: #CC0000;
+	display: inline-block;
+}
+dl.inputgroup dd  .input-err i{
+	color: #CC0000;
+}
+dl.inputgroup dd input[type=submit], dl.inputgroup dd input[type=reset]{
+	width: 80px;
+	height: 30px;
+	background: #93A1A1;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+dl.inputgroup dd input[type=submit]:hover, dl.inputgroup dd input[type=reset]:hover{
+	background: #00AA88;
+}
+dl.inputgroup dd input[type=text], dl.inputgroup dd input[type=password] {
+	width: 200px;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	outline: none;
+}
+dl.inputgroup dd select{
+	padding: 5px;
+	border-radius: 5px;
+	outline: none;
+}
+dl.inputgroup dd select option{
+	padding: 15px;
+	
+}
+dl.inputgroup dd input[type=radio]{
+	margin: 0px 5px;
+}
+dl.inputgroup dd div.radio{
+	display: inline-block;
+	padding-right: 20px;
+}
+dl.inputgroup dd textarea{
+	outline: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+table.commontable {
+	
+	overflow: hidden;
+	border: 1px solid #E2E9EA;
+}
+table.commontable tr td{
+	padding: 5px;
+}
+table.commontable tbody tr:hover{
+	background: #f5f6fa;
+}
+table.commontable thead{
+	background: #E2E9EA;
+}
+table.commontable tr td a:hover{
+	text-decoration: underline;
+}
+table.commontable tr td span{
+	padding: 0px 5px;
+}
+table.commontable tr td span.disabled{
+	color: #aaa;
+}
+
+div.buttoncommon{
+	display: inline-block;
+	background: #00AA88;
+	cursor: pointer;
+	margin: 3px;
+}
+div.buttoncommon:hover{
+	background: #0099FF;
+}
+div.buttoncommon a{
+	padding: 5px 20px;	
+	display: inline-block;
+	color: #fff;
+}
+div.buttoncommon a:hover{
+	color: #fff;
+}
+
+div.operatebar{
+	padding: 10px 5px;
+}
+div.operatebar select{
+	padding: 3px;
+}
+div.operatebar input[type=submit] {
+	padding: 5px 20px;
+	background: #00AA88;
+	border: none;
+	color: #fff;
+}
+div.operatebar input[type=submit]:hover{
+	background: #0099FF;
+}
+div.operatebar .pagebar{
+	padding: 0px;
+	display: inline-block;
+}
+div.operatebar .pagebar dl{
+	display: inline-block;
+	margin-left: 20px;
+}
+div.operatebar .pagebar dl dd{
+	display: inline-block;
+	background: #00AA88;
+	
+}
+div.operatebar .pagebar dl dd a{
+	display: inline-block;
+	padding: 5px 10px;
+	color: #FFFFFF;
+}
+div.operatebar .pagebar dl dd a:hover{
+	background: #0099FF;
+}
+div.operatebar .pagebar dl dd a.active{
+	background: #0099FF;
+}
+
+
+div.editor{
+	padding: 10px 1px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+div.editor .titlebar{
+	position: relative;
+	margin-bottom: 15px;
+}
+div.editor .titlebar label{
+	position: absolute;
+	padding: 6px 20px;
+	font-size: 18px;
+	color: #777;
+	z-index: -1;
+}
+div.editor .titlebar input{
+	padding:8px 8px;
+	width: 100%;
+	background: transparent;
+	outline: none;
+	border: 1px solid #aaa;
+	box-sizing: border-box;
+}
+div.editor .titlebar input:focus{
+	background: #fff;
+	box-shadow: 0px 0px 2px #0099FF;
+}
+div.editor .content{
+	padding: 2px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 15px 0px;
+}
+div.editor input[type=submit]{
+	padding: 5px 20px;
+	background: #00AA88;
+	border: none;
+	color: #fff;
+	
+}
+div.editor input[type=submit]:hover{
+	background: #0099FF;
+}
+

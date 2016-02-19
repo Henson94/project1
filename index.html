@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/Font-Awesome-3.2.1/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<script type="text/javascript" src="js/main.js" ></script>
+<style type="text/css">
+body,html{
+	height: 100%;
+	overflow: hidden;
+}
+</style>
+</head>
+
+<body>
+<table class="maintable" border="0">
+	<tr>
+		<td>
+			<div class="brand"><a href="#">后台管理系统</a></div>
+		</td>
+		<td>
+			<div class="user pull-right">Henson</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="left">
+				<div class="verticalmenu">
+					<dl>
+						<!--以下载菜单项，按格式添加dd-->
+						<dd class="selected"><a href="#"><i class=""></i>系统信息</a></dd>
+						<dd>
+							<a href="#"><i class=""></i>个人信息</a>
+							<dl>
+								<dd><a href="info.html" target="mainframe"><i class=""></i>默认首页</a></dd>
+								<dd><a href="updatepwd.html" target="mainframe"><i class=""></i>修改密码</a></dd>
+							</dl>
+						</dd>
+						<dd><a href="cleancache.html" target="mainframe"><i class=""></i>缓存清理</a></dd>
+						<dd><a href="#"><i class=""></i>系统设置</a></dd>
+						<dd>
+							<a href="#"><i class=""></i>权限管理</a>
+							<dl>
+								<dd><a href="role.html" target="mainframe"><i class=""></i>角色管理</a></dd>
+								<dd><a href="manager.html" target="mainframe"><i class=""></i>管理员管理</a></dd>
+							</dl>
+						</dd>
+						<dd>
+							<a href="#"><i class=""></i>内容管理</a>
+							<dl>
+								<dd><a href="news.html" target="mainframe"><i class=""></i>新闻管理</a></dd>
+								<dd><a href="#"><i class=""></i>文章管理</a></dd>
+								<dd><a href="#"><i class=""></i>回复管理</a></dd>
+								<dd><a href="#"><i class=""></i>照片管理</a></dd>
+								<dd><a href="#"><i class=""></i>留言管理</a></dd>
+							</dl>
+						</dd>
+						<dd>
+							<a href="#"><i class=""></i>模块管理</a>
+							<dl>
+								<dd><a href="#"><i class=""></i>新闻模块</a></dd>
+								<dd><a href="#"><i class=""></i>发面模块</a></dd>
+								<dd><a href="#"><i class=""></i>会员模块</a></dd>
+							</dl>
+						</dd>
+						<dd>
+							<a href="#"><i class=""></i>扩展管理</a>
+							<dl>
+								<dd><a href="#"><i class=""></i>菜单管理</a></dd>
+								<dd><a href="#"><i class=""></i>操作日志</a></dd>
+								<dd><a href="#"><i class=""></i>联动菜单</a></dd>
+							</dl>
+						</dd>
+						<!--以上载菜单项，按格式添加<dd><a><i></i></a></dd>-->
+					</dl>
+				</div>
+			</div>
+		</td>
+		<td>
+			<div class="main">
+				<div class="maininner">
+					<!--以下是主要内容显示部分，可以自由添加内容-->
+					<div class="crumbs"><b>当前位置：</b><a href="#">我的面板</a>/首页</div>
+					<iframe id="mainframe" name="mainframe" src="info.html" frameborder="0" width="100%" scrolling="yes" onload="this.height=0;this.height=mainframe.document.body.scrollHeight;"></iframe>
+					<!--以上是主要内容显示部分，可以自由添加内容-->
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
